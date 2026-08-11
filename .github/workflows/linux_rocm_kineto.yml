@@ -21,7 +21,7 @@ jobs:
     with:
       job-name: linux-rocm-kineto-build-and-test
       runner: linux.rocm.gpu.ecosystem.mi350.1
-      timeout: 180
+      timeout: 240
       # Checkout the Kineto repo at the PR ref with submodules
       repository: ${{ github.repository }}
       ref: ${{ github.ref }}
