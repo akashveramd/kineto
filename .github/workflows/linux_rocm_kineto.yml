@@ -23,7 +23,7 @@ jobs:
   build:
     strategy:
       matrix:
-        rocm: ["10.0"]
+        rocm: ["10.1"]
     uses: pytorch/test-infra/.github/workflows/linux_job_v2.yml@main
     with:
       job-name: linux-rocm-${{ matrix.rocm }}-kineto-build
@@ -49,7 +49,7 @@ jobs:
     needs: build
     strategy:
       matrix:
-        rocm: ["10.0"]
+        rocm: ["10.1"]
     uses: pytorch/test-infra/.github/workflows/linux_job_v2.yml@main
     with:
       job-name: linux-rocm-${{ matrix.rocm }}-kineto-test
